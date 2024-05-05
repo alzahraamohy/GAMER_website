@@ -4,7 +4,7 @@ This document provides an overview of our project—a gaming website designed fo
 
 # Project Overview
 1. Purpose:
-- The purpose of this project is to create an engaging and user-friendly platform for gamers to browse, purchase, and explore a wide variety of games.
+ The purpose of this project is to create an engaging and user-friendly platform for gamers to browse, purchase, and explore a wide variety of games.
 
 2. Features:
 - User Authentication: Allow users to create accounts, log in, and securely manage their profiles.
@@ -15,17 +15,17 @@ This document provides an overview of our project—a gaming website designed fo
   
 # Technologies Used
 1. Frontend:
-- HTML/CSS/JavaScript: For building the user interface and interactivity.
+ HTML/CSS/JavaScript: For building the user interface and interactivity.
 
 2. Backend:
-- Handled a web application framework by PHP, and localhostiong by Phpmyadmin.
+ Handled a web application framework by PHP, and localhostiong by Phpmyadmin.
 
 3. Database:
-- MySQL database for storing website data, including user information, game details, and transactions.
+ MySQL database for storing website data, including user information, game details, and transactions.
 
 # Contibuteres
-- Ashrqat Ali
 - Alzahraa Mohy
+- Ashrqat Ali
 -
 -
 -
