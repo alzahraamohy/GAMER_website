@@ -23,7 +23,7 @@ This document provides an overview of our project—a gaming website designed fo
 3. Database:
  MySQL database for storing website data, including user information, game details, and transactions.
 
-# Contibuteres
+# Contributors
 - Alzahraa Mohy
 - Ashrqat Ali
 -
