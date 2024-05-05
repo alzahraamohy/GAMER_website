@@ -26,7 +26,7 @@ This document provides an overview of our project—a gaming website designed fo
 # Contributors
 - Alzahraa Mohy
 - Ashrqat Fawzy
--
--
--
+- Mohamed Khaled Farag
+- 
+- 
 
