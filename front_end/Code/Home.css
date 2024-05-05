@@ -1,0 +1,494 @@
+/* Font */
+@font-face {
+    font-family: 'Eras Demi ITC Regular';
+    src: url('Assets/Eras\ Demi\ ITC\ Regular.ttf') format('truetype');
+}
+
+/* Global Styles */
+:root {
+    /* Colors */
+    --primary-color: #111317;
+    --secondary-color: #ee2d30;
+    --tertiary-color: #fff;
+    --quaternary-color: #1e2024;
+
+    /* Card Dimensions */
+    --card-height: 20vw;
+    --card-width: calc(var(--card-height) / 1.5);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: 'Eras Demi ITC Regular', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    max-height: 60vw;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+nav {
+    max-width: 100%;
+    max-height: 5vw;
+    background-color: var(--quaternary-color);
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_logo img {
+    width: 15vw;
+    height: auto;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+}
+
+.link a {
+    position: relative;
+    padding-bottom: 0.40rem;
+    color: var(--tertiary-color);
+    text-decoration: none;
+    font-size: 1.5vw;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 0.20vw;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--secondary-color);
+    transition: width 0.3s;
+}
+
+.link a:hover::after {
+    width: 80%;
+}
+
+.btn {
+    padding: 0.5vw 2vw;
+    margin-right: 4vw;
+    color: var(--tertiary-color);
+    background-color: var(--secondary-color);
+    border-radius: 1vw;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5vw;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 0.1vw white;
+}
+
+.game_cover {
+    max-width: 100%;
+    height: 45vw;
+    background-color: var(--primary-color);
+    background-image: url(Assets/Home_page/Background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 2rem 1rem;
+    color:var(--tertiary-color);
+    opacity: 0.09;
+    z-index: 1;
+}
+
+.spider {
+    z-index: 1;
+    color: var(--tertiary-color);
+    display: flex;
+    position: absolute;
+    padding-top: 1.5vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2vw;
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vw;
+    padding-left: 6%;
+    font-size: 1vw;
+    margin-top: 4vw;
+    margin-right: -3vw;
+}
+
+.marvel_logo{
+    margin: auto;
+    width: 12vw;
+    height: 5vw;
+    margin-bottom: -1.5vw;
+}
+
+.content>h1 {
+    text-align: center;
+    font-size: 8vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.15vw var(--tertiary-color);
+    text-decoration-line: initial;
+}
+
+.content>.p2 {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 600;
+    margin-top: -1.5vw;
+    margin-bottom: 1vw;
+}
+
+.content>.p3,
+.content>.p4,
+.content>.p5,
+.content>.p6 {
+    font-size: 1vw;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    z-index: 1;
+    margin-top: -1.5vw;
+    margin-left: 3vw;
+    text-transform: capitalize;
+}
+
+.content>button {
+    align-items: center;
+    margin: auto;
+    margin-top: 1vw;
+    max-width: 30vw;
+    max-height: 15vw;
+    padding: 1vw 2vw;
+    outline: none;
+    border: none;
+    font-size: 1.3vw;
+    font-weight: 600;
+    color: var(--tertiary-color);
+    background-color: var(--secondary-color);
+    border-radius: 1vw;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.char {
+    display: flex;
+    margin-top: -3vw;
+    width: 100%;
+    height: auto;
+    margin-left: -8vw;
+}
+
+.news-banner {
+    margin: 0;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    margin-top: 8vw;
+}
+
+.news-banner::before,
+.news-banner::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(45% - 40px);
+    height: 4px;
+    background-color: var(--secondary-color);
+    padding: 0vw 0.5vw;
+}
+
+.news-banner::before {
+    left: calc(0% + 10px);
+}
+
+.news-banner::after {
+    right: calc(0% + 10px);
+}
+
+.news-word {
+    position: relative;
+    z-index: 2;
+    color: var(--secondary-color);
+    padding: 0 10px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10vw;
+    padding: 2vw;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+    padding-left: 9vw;
+    padding-right: 4vw;
+    margin-top: 2vw;
+}
+
+
+.card {
+    width: var(--card-width);
+    height: 30vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+    gap: 8vw;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.card:hover .wrapper {
+    transform: perspective(600vw) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 5vw 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 2vw;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+}
+
+.wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+        to top,
+        transparent 46%,
+        rgba(12, 13, 19, 0.5) 68%,
+        rgba(12, 13, 19) 97%
+    );
+}
+
+.wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 46%,
+        rgba(12, 13, 19, 0.5) 68%,
+        rgba(12, 13, 19) 97%
+    );
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+    opacity: 1;
+}
+
+.card:hover .wrapper::after {
+    height: 2.5vw;
+}
+
+.character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+}
+
+.card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+}
+
+.game-info {
+    margin-top: 22vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5vw;
+    height: 45%;
+}
+
+.price {
+    margin: 1vw 0;
+    font-size: 1.2vw;
+}
+
+.buy-button {
+    border: none;
+    background-color: #ee2d30;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.8vw 2vw;
+    outline: none;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 600;
+    border-radius: 1vw;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 1vw;
+}
+
+.buy-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 0.1vw white;
+}
+
+#coming_soon {
+    margin: 0;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    margin-top: 8vw;
+    margin-bottom: 4vw;
+}
+
+#coming_soon::before,
+#coming_soon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(35% - 40px);
+    height: 4px;
+    background-color: var(--secondary-color);
+    padding: 0vw 0.5vw;
+}
+
+#coming_soon::before {
+    left: calc(0% + 10px);
+}
+
+#coming_soon::after {
+    right: calc(0% + 10px);
+}
+
+.slider_container {
+    width: 90vw;
+    height: 50vw;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: -2vw;
+    box-shadow: 0 0 1vw white;
+    border-radius: 3vw;
+    margin-bottom: 2vw;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.item {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    box-shadow: none;
+    position: absolute;
+    bottom: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style-type: none;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+}
+
+.item:nth-child(1),
+.item:nth-child(2) {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 1;
+}
+
+.item:nth-child(3) {
+    left: calc(55% - 2vw - 6vw);
+}
+
+.item:nth-child(4) {
+    left: calc(55% - 1.5vw - 2vw);
+}
+
+.item:nth-child(5) {
+    left: calc(55% + 1.5vw);
+}
+
+.item:nth-child(6) {
+    left: calc(55% + 1.5vw + 6vw);
+    opacity: 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 5vw; 
+        padding-left: 23vw; 
+        padding-right: 5vw; /
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Assets/logo/Tab-Icon.png" sizes="30x30">
+    <title>SIGN IN NOW</title>
+    <link rel="stylesheet" href="https://use.typekit.net/example.css">
+    <link rel="stylesheet" href="master.css">
+
+</head>
+<body>
+    <nav>
+    <div class="logo">
+        <a href="#"><img src="Assets/Sign up/logo-red.png" alt="logo" /></a>
+    </nav>
+    </div>
+    <div class="container">
+            <form action="/action_page.php">
+                <h1>WELCOME BACK TO THE WORLD OF </h1>
+                <div class="signin_logo">
+                <img src="Assets/Sign up/logo-red.png" alt="signin_logo">
+                </div>
+                <div class="u">
+                    <label for="user">USERNAME OR EMAIL :</label>
+                    <input type="text" id="user" name="user" placeholder="Please Enter Your Username Or Email">
+                </div>
+                <div class="p">
+                    <label for="password">PASSWORD :</label>
+                    <input type="password" id="password" name="password" placeholder="Please Enter Your Password">
+                </div>
+                <div class="signup">
+                <p >DON'T HAVE AN ACCOUNT ? <a href="Sign_up.html">SIGN UP NOW!</a></p>
+                </div>   
+                <button class="button" type="button" onclick="login()">LOG-IN</button>
+            </form>
+        </div>
+        <img class="left" src="Assets/Sign up/signup.png" alt="characters">
+        <div class="error-message" id="error-message"></div>
+        <script>
+            function displayErrorMessage(message) {
+                var errorMessage = document.getElementById("error-message");
+                errorMessage.innerText = message;
+                errorMessage.style.display = "block";
+            }
+            function login() {
+                var loginSuccessful = false;
+                if (!loginSuccessful) {
+                    displayErrorMessage("Incorrect username or password. Please try again.");
+                }
+            }
+        </script>
+        
+</body>
+</html>

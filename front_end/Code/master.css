@@ -1,0 +1,320 @@
+@font-face {
+    font-family: 'Eras Demi ITC Regular';
+    src: url('Assets/Eras\ Demi\ ITC\ Regular.ttf') format('truetype');
+}
+
+:root {
+    --primary-color: #111317;
+    --secondary-color: #ee2d30;
+    --tertiary-color: #fff;
+    --quaternary-color: #1e2024;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Eras Demi ITC Regular', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    background-image: url(Assets/Untitled-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Eras Demi ITC', sans-serif;
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.logo img {
+    max-height: 40px;
+    width: 150px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 75%;
+    width: 50%;
+    transition: 1s 0.7s ease-in-out;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+}
+
+h1 {
+    color: var(--secondary-color);
+    margin-left: 3rem;
+    font-size: 20px;
+    padding-bottom: 1rem;
+}
+
+.signup_logo img,
+.signin_logo img {
+    width: 360px !important;
+    padding-left: 2rem;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0rem 5rem;
+    transition: all 0.2s 0.7s;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.container input[type="email"],
+.container input[type="text"],
+.container input[type="password"] {
+    width: 400px;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-left: 3rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    box-shadow: 0 0 3px var(--tertiary-color);
+}
+
+.input-area .error-icon{
+    right: 15px;
+    color: #dc3545;
+}
+
+
+.input-area {
+    position: relative;
+    margin-bottom: 3px;
+}
+
+.input-area .error-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    color: #dc3545;
+}
+
+.input-area .error-txt {
+    color: #dc3545;
+    text-align: left;
+    margin-top: 2px;
+    margin-left: 3rem;
+    display: none; /* Initially hidden */
+}
+
+.input-area.error .error-txt {
+    display: block; /* Displayed when there's an error */
+}
+
+.container input[type="email"]::placeholder,
+.container input[type="text"]::placeholder,
+.container input[type="password"]::placeholder {
+    color: (#fff, 0.3); 
+}
+
+.container input[type="email"]:focus::placeholder,
+.container input[type="text"]:focus::placeholder,
+.container input[type="password"]:focus::placeholder {
+    color: rgba(255, 255, 255, 0.1);
+}
+
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--tertiary-color);
+    font-size: 18px;
+    padding: 2px 0px;
+    margin-left: 3rem;
+    padding-bottom: 0.5rem;
+}
+
+.signin,
+.signup {
+    font-size: 15px;
+    margin-left: 3rem;
+    padding-bottom: 10px;
+}
+
+.signin p,
+.signup p {
+    color: var(--tertiary-color);
+}
+
+.signin a,
+.signup a {
+    color: var(--secondary-color);
+}
+
+.button {
+    width: 250px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 3rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 18px;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.left {
+    margin-left: -4rem;
+    width: 70%;
+    position: fixed;
+    bottom: 0;
+}
+
+
+.container input.error {
+    border-color: var(--secondary-color); 
+}
+
+.container label.error {
+    color: var(--secondary-color); 
+}
+
+.container .error-txt {
+    color: var(--secondary-color); 
+}
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 70%;
+        left: 75%;
+    }
+}
+
+@media only screen and (width < 1200px) {
+    .container {
+        width: 80%;
+        left: 50%;
+    }
+    .left {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 540px) and (max-height: 932px) {
+    * {
+        aspect-ratio: auto;
+    }
+    nav {
+        flex-direction:row;
+        align-items: left;
+        justify-content: left;
+    }
+
+    .logo img {
+        width: 30vw !important;
+        padding-left: 2vw;
+    }
+
+
+    .container {
+        width: 90%;
+        left: 50%;
+        margin-top: auto;
+
+    }
+    .left {
+        display: none;
+    }
+    form {
+        padding: 0rem 2rem;
+    }
+    h1 {
+        margin-left: 1rem;
+        font-size: 3.5vw;
+        padding-bottom: 0.5rem;
+    }
+
+
+
+    .signin_logo,
+    .signup_logo {
+        width: 120px !important;
+        display: grid;
+        place-items: center;
+        margin-left: -17rem;
+    }
+
+    .container input[type="email"],
+    .container input[type="text"],
+    .container input[type="password"] {
+        width: 250px;
+        padding: 3vw;
+        margin-bottom: 1.5rem;
+        margin-left: 1rem;
+        border: 1px solid var(--secondary-color);
+        border-radius: 5px;
+        background-color: var(--primary-color);
+        color: var(--tertiary-color);
+        box-shadow: 0 0 3px var(--tertiary-color);
+    
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--tertiary-color);
+    font-size: 12px;
+    padding: 2px 0px;
+    margin-left: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.signin,
+.signup {
+    font-size: 10px;
+    margin-left: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.button {
+    width: 150px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 12px;
+}
+
+}
