@@ -1,0 +1,248 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+
+}
+header #btn{
+    color: white;
+    background-color: #ee2d30;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+header #btn:hover{
+    background-color: #602425;
+    transform: scale(1.1);
+}
+
+.logo{
+    text-decoration: none;
+    color: #ee2d30;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #ee2d30;
+    padding-left: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.navigation a:hover{
+    color: #602425;
+}
+
+section{
+    padding: 100px 200px;
+
+}
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(images/Background.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main h2{
+    color: white;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.main h2 span{
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 3em;
+    font-weight: 600;
+    font-style: bold;
+}
+
+.main h3{
+color: white;
+font-weight: 500;
+font-size: 2em;
+letter-spacing: 1px;
+margin-top: 10px;
+margin-bottom: 30px;
+font-family: 'Eras Demi ITC';
+}
+
+.main-btn{
+    color: white;
+   background-color: #ee2d30;
+   text-decoration: none;
+   font-size: 1.1em;
+   font-weight: 600;
+   display: inline-block;
+   padding: 0.9375em 2.1875em;
+   letter-spacing: 1px;
+   border-radius: 10px;
+   margin-bottom: 40px;
+   cursor: pointer;
+   transition: 0.5s ease;
+}
+
+.main-btn:hover{
+    background-color: #602425;
+    transform: scale(1.1);
+}
+
+
+
+.title{
+    display: flex;
+    justify-content: center;
+    color: #ee2d30;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+ 
+}
+
+.content{
+    display: flex; 
+     justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+ 
+}
+
+
+.card{
+    background-color: black;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.5s ease;
+    margin: 10px;
+   
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+.icon{
+ color: #ee2d30;
+    text-align: center;
+    font-size: 8em;
+}
+
+.info{
+    text-align: center;
+}
+
+.info h3{
+    color: #ee2d30;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.coming-soon{
+    background-color: #34343a;
+}
+.coming-soon .content{
+    margin-top: 30px;
+}
+.come-card{
+    background-color:  #34343a;
+    border: 1px solid white;
+    min-height: 14em;
+    width: 15em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.5s ease;
+   
+}
+.coming-soon:hover{
+    transform: scale(1.1);
+}
+
+.coming-soon:hover .project-image{
+    opacity: 0.9;
+}
+
+.come-image img{
+    width: 100%;
+    height: 57%;  
+}
+
+
+
+
+.more-details{
+    text-decoration: none;
+    color:#ee2d30 ;
+}
+
+
+.footer{
+    background-color: #34343a;
+    color: white;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-title{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-title span{
+    color: #ee2d30 ;
+}
+
+
+@media(max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+    .navigation a{
+        padding-left: 10px;
+    }
+    .title{
+        font-size: 1.5em;
+    }
+    section{
+        padding: 80px 20px;
+    }
+    .main-content h2{
+        font-size: 1em;
+    }
+    .main-content h3{
+        font-size: 1.5em;
+    }
+
+}
