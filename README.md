@@ -27,6 +27,6 @@ This document provides an overview of our project—a gaming website designed fo
 - Alzahraa Mohy
 - Ashrqat Fawzy
 - Mohamed Khaled Farag
-- 
-- 
+- Ahmed Mahdy
+- Kareem Ahmed
 
